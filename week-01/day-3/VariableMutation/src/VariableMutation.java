@@ -2,7 +2,7 @@ public class VariableMutation {
     public static void main(String[] args) {
         int a = 3;
         // make it bigger by 10
-        a += 3;
+        a += 10;
         System.out.println(a);
 
         int b = 100;
