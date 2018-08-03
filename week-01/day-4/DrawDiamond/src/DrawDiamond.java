@@ -30,7 +30,7 @@ public class DrawDiamond{
                 for(int l = 1; l < i-(a/2); l++){
                     System.out.print(" ");
                 }
-                for(int m = 1; m < (a-i)*2+2; m++){
+                for(int m = 1; m <= (a-i)*2+1; m++){
                     System.out.print("*");
                 }
             }
