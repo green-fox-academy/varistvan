@@ -1,5 +1,6 @@
-
 body {
+    display: block;
+    margin: 0 10%;
     font-family: 'Courier New', Courier, monospace;
     padding: 10%, 10%;
     background-image: url("topography.png")
@@ -9,4 +10,29 @@ h1, h3 {
 }
 h3, a {
     color: #ff0099;
+}
+content {
+    margin: top;
+}
+div.menu {
+    display: inline;
+    background-color: #333333;
+    text-align: right;
+    position: sticky;
+    top: 0px;
+    text-align: right;
+    width: 80%;
+}
+div.logo {
+    display: inline;
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+}
+div.links-right{
+    display: inline;
+}
+div.menu a {
+ 
+    margin: 10px;
+    padding: 14px;
 }
