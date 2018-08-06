@@ -4,7 +4,6 @@ public class AppendAFunc {
         System.out.println(appendAFunc(typo));
     }
     public static String appendAFunc(String wordWithMistake) {
-        String corrWord = wordWithMistake + "a";
-        return corrWord;
+        return wordWithMistake + "a";
     }
 }
