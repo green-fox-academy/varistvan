@@ -1,5 +1,4 @@
 body {
-    display: block;
     margin: 0 10%;
     font-family: 'Courier New', Courier, monospace;
     padding: 10%, 10%;
@@ -11,28 +10,39 @@ h1, h3 {
 h3, a {
     color: #ff0099;
 }
-content {
-    margin: top;
+div content {
+    padding-top: 50px;
 }
-div.menu {
+#menu {
     display: inline;
     background-color: #333333;
     text-align: right;
-    position: sticky;
+    position: fixed;
     top: 0px;
     text-align: right;
     width: 80%;
 }
-div.logo {
-    display: inline;
-    text-align: left;
-    padding: 10px 10px 10px 10px;
+img {
+    position: absolute;
+    display: block;
+    top: 5px;
+    left: 5px;  
 }
-div.links-right{
-    display: inline;
+nav {
+    float: right;
 }
-div.menu a {
- 
-    margin: 10px;
-    padding: 14px;
+nav ul {
+    margin-top: 10px;
+	padding: 0 20px;  
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+nav ul li {
+    float: left;
+    margin: auto 10px;
+}
+header {
+    position: relative;
+    margin: 0 auto;
 }
