@@ -6,10 +6,10 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class PurpleSteps3d {
     public static void mainDraw(Graphics graphics) {
+        Color color = new Color(180, 60, 255);
+        graphics.setColor(color);
         int counter = 0;
         for (int i = 0; i < 6; i++) {
-            Color color = new Color(180, 60, 255);
-            graphics.setColor(color);
             graphics.fill3DRect(i*10+counter, i*10+counter, (i+1)*10, (i+1)*10, true);
             counter += (i*10);
         }
