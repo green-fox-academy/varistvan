@@ -7,23 +7,18 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class EnvelopeStar {
     public static void mainDraw(Graphics graphics) {
-        int side;
+        int s = WIDTH / 2;      // "s" is half of the side of the square shaped screen
         if (HEIGHT < WIDTH) {
-            side = HEIGHT;
-        }else{
-            side = WIDTH;
+            s = HEIGHT / 2;
         }
         graphics.setColor(Color.green);
-        for (int i = 10; i < side; i += 10) {
-            if (i <= side / 2){
-                graphics.drawLine(i, side/2, side/2, side/2 - i);
+        for (int i = 10; i < (2 * s); i += 10) {
+            if (i <= s){
+                graphics.drawLine(i, s, s, s - i);
+                graphics.drawLine(i, s, s, s + i);
             }else{
-                graphics.drawLine(i,side/2, side/2,side/2 + i-(side));
-            }
-            if (i <= side / 2){
-                graphics.drawLine(i, side/2, side/2, side/2 + i);
-            }else{
-                graphics.drawLine(i,side/2, side/2,side-i+(side/2));
+                graphics.drawLine(i, s, s,i - s);
+                graphics.drawLine(i, s, s,3 * s - i);
             }
         }
     }
