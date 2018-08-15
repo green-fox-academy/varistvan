@@ -37,7 +37,6 @@ public class DiceSet {
         DiceSet diceSet = new DiceSet();
         do {
             diceSet.roll();
-            diceSet.getCurrent();
         }
         while (diceSet.getCurrent(0) != 6 | diceSet.getCurrent(1) != 6 | diceSet.getCurrent(2) != 6 | diceSet.getCurrent(3) != 6 | diceSet.getCurrent(4) != 6 | diceSet.getCurrent(5) != 6);
         System.out.println(Arrays.toString(diceSet.getCurrent()));
