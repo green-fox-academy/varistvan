@@ -26,8 +26,8 @@ public class Animal {
     }
 
     void play() {
-        hunger--;
-        thirst--;
+        hunger++;
+        thirst++;
         System.out.println("The " + species + " plays.");
     }
 }
