@@ -8,7 +8,7 @@ public class Main {
         sharpie1.use();
         sharpie3.use();
         sharpie3.use();
-        
+
         printAll(sharpie1);
         printAll(sharpie2);
         printAll(sharpie3);
