@@ -21,9 +21,9 @@ public class CrossLines {
         g.drawLine(x0-side/2, y0+side/6, x0+side/2, y0+side/6);
 
         drawCrossLines(g, x0, y0-side/3, side/3, recNr + 1);
-        drawCrossLines(g, x0, y0 - side, side/3, recNr + 1);
-        drawCrossLines(g, x0 + side/3, y0 - side, side/3, recNr + 1);
-        drawCrossLines(g, x0 - side, y0, side/3, recNr + 1);
+        drawCrossLines(g, x0+side/3, y0, side/3, recNr + 1);
+        drawCrossLines(g, x0, y0+side/3, side/3, recNr + 1);
+        drawCrossLines(g, x0-side/3, y0, side/3, recNr + 1);
     }
 
     // Don't touch the code below
