@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Pirate {
 
     int intox;
@@ -11,20 +9,22 @@ public class Pirate {
     }
 
     void drinkSomeRum() {
-        if (this.alive == false) {
-            System.out.println("He's dead.");
-        } else {
+        if (this.alive) {
             this.intox++;
+        } else {
+            System.out.println("He's dead.");
         }
     }
 
     void howsItGoingMate() {
-        if (this.alive == false) {
-            System.out.println("He's dead.");
-        } else if (this.intox <= 4) {
-            System.out.println("This pirate says: \"Pour me anudder!\"");
+        if (this.alive) {
+            if (this.intox <= 4) {
+                System.out.println("This pirate says: \"Pour me anudder!\"");
+            } else {
+                System.out.println("This Pirate says: \"Arghh, I'ma Pirate. How d'ya d'ink its goin?\"");
+            }
         }else{
-            System.out.println("Arghh, I'ma Pirate. How d'ya d'ink its goin?");
+            System.out.println("He's dead.");
         }
     }
 
@@ -48,30 +48,8 @@ public class Pirate {
                 System.out.println("The challanged pirate died.");
             }
         }else{
-            System.out.println("One of the pirates is dead, so it is not possible to fight.");
+            System.out.println("One of the pirates is dead, you will not see any fight here.");
         }
-    }
-
-    public static void main(String[] args) {
-        Pirate firstPir = new Pirate();
-        Pirate secondPir = new Pirate();
-        Pirate thirdPir = new Pirate();
-        firstPir.drinkSomeRum();
-        firstPir.drinkSomeRum();
-        firstPir.drinkSomeRum();
-        firstPir.drinkSomeRum();
-        firstPir.drinkSomeRum();
-        secondPir.drinkSomeRum();
-        secondPir.drinkSomeRum();
-        firstPir.howsItGoingMate();
-        secondPir.howsItGoingMate();
-        secondPir.die();
-        secondPir.drinkSomeRum();
-        secondPir.howsItGoingMate();
-        firstPir.brawl(thirdPir);
-        firstPir.howsItGoingMate();
-        thirdPir.howsItGoingMate();
-
     }
 
 }
