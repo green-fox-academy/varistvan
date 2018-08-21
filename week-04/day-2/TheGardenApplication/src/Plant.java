@@ -12,7 +12,7 @@ public class Plant {
         return this.waterLevel;
     }
 
-    public void setWaterLevel(double waterAmount) {
+    public void addToWaterLevel(double waterAmount) {
         this.waterLevel += waterAmount;
     }
 
@@ -20,7 +20,7 @@ public class Plant {
         return this.color;
     }
 
-    public void printIfNeedsWater() {
+    public void printDemandForWater() {
         if (this.getWaterLevel() <= 0) {
             System.out.println("The " + getColor() + " plant needs water");
         }else{

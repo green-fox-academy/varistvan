@@ -5,6 +5,11 @@ public class Garden {
     private List<Flower> flowers;
     private List<Tree> trees;
 
+    public Garden() {
+        this.flowers = new ArrayList<>();
+        this.trees = new ArrayList<>();
+    }
+
     public void addFlower(Flower flower) {
         this.flowers.add(flower);
     }
@@ -15,25 +20,25 @@ public class Garden {
 
     public void watering(double wateringAmount) {
         int counter = 0;
-        System.out.println("Watering with " + wateringAmount);
+        System.out.println("Watering with " + (int)wateringAmount);
         for (Flower item : flowers) {
-            if (item.needsWater()){
+            if (item.needsWater()) {
                 counter++;
             }
         }
         for (Tree item : trees) {
-            if (item.needsWater()){
+            if (item.needsWater()) {
                 counter++;
             }
         }
         wateringAmount = wateringAmount / counter;
         for (Flower item : flowers) {
-            if (item.needsWater()){
+            if (item.needsWater()) {
                 item.absorbWater(wateringAmount);
             }
         }
         for (Tree item : trees) {
-            if (item.needsWater()){
+            if (item.needsWater()) {
                 item.absorbWater(wateringAmount);
             }
         }
@@ -41,16 +46,12 @@ public class Garden {
 
     public void printGardenSituation() {
         for (Flower item : this.flowers) {
-            item.printIfNeedsWater();
+            item.printDemandForWater();
         }
         for (Tree item : this.trees) {
-            item.printIfNeedsWater();
+            item.printDemandForWater();
         }
         System.out.println();
     }
 
-    public Garden() {
-        this.flowers = new ArrayList<>();
-        this.trees = new ArrayList<>();
-    }
 }
