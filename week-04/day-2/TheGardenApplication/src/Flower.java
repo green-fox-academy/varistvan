@@ -4,6 +4,7 @@ public class Flower extends Plant {
 
     public Flower(String color) {
         super(color);
+        setWaterLevel(0);
     }
 
     public void printIfNeedsWater() {
@@ -14,11 +15,10 @@ public class Flower extends Plant {
         }
     }
 
-    public double absorbWater(double waterUnit) {
+    public void absorbWater(double waterUnit) {
         double absorbedWater;
         absorbedWater = (waterUnit * 75) / 100 ;
-        this.waterLevel += absorbedWater;
-        return this.waterLevel;
+        setWaterLevel(absorbedWater);
     }
 
     public boolean needsWater() {

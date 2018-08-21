@@ -1,7 +1,7 @@
 public class Plant {
 
     private String color;
-    protected double waterLevel;
+    private double waterLevel;
 
     public Plant(String color) {
         this.color = color;
@@ -10,6 +10,10 @@ public class Plant {
 
     public double getWaterLevel() {
         return this.waterLevel;
+    }
+
+    public void setWaterLevel(double waterAmount) {
+        this.waterLevel += waterAmount;
     }
 
     public String getColor() {

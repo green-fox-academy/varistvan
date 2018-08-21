@@ -39,11 +39,6 @@ public class Garden {
         }
     }
 
-    @Override
-    public String toString() {
-        return "The garden has " + this.flowers.size() + " flowers and " + this.trees.size() + " trees.";
-    }
-
     public void printGardenSituation() {
         for (Flower item : this.flowers) {
             item.printIfNeedsWater();
