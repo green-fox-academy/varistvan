@@ -10,6 +10,12 @@ public class Sharpie {
         this.inkAmount = 100;
     }
 
+    Sharpie(String color, double width, double inkAmount) {
+        this.color = color;
+        this.width = width;
+        this.inkAmount = inkAmount;
+    }
+
     void use() {
         inkAmount--;
     }
