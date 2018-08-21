@@ -22,7 +22,7 @@ public class Tree extends Plant {
     }
 
     public boolean needsWater() {
-        if (this.getWaterLevel() < 10){
+        if (this.getWaterLevel() < minWater){
             return true;
         }else{
             return false;

@@ -22,7 +22,7 @@ public class Flower extends Plant {
     }
 
     public boolean needsWater() {
-        if (this.getWaterLevel() < 5){
+        if (this.getWaterLevel() < minWater){
             return true;
         }else{
             return false;

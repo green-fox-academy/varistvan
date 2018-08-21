@@ -20,11 +20,4 @@ public class Plant {
         return this.color;
     }
 
-    public void printDemandForWater() {
-        if (this.getWaterLevel() <= 0) {
-            System.out.println("The " + getColor() + " plant needs water");
-        }else{
-            System.out.println("The " + getColor() + " plant doesn't need water");
-        }
-    }
 }
