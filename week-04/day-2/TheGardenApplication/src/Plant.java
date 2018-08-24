@@ -36,9 +36,9 @@ public class Plant {
 
     public void printDemandForWater(double minWater, String plantType) {
         if (this.getWaterLevel() < minWater) {
-            System.out.println("The " + getColor() + " " + plantType + " needs water");
+            System.out.println("The " + this.color + " " + plantType + " needs water");
         } else {
-            System.out.println("The " + getColor() + " " + plantType + " doesn't need water");
+            System.out.println("The " + this.color + " " + plantType + " doesn't need water");
         }
     }
 
