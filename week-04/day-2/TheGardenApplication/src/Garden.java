@@ -20,7 +20,7 @@ public class Garden {
 
     public void watering(double wateringAmount) {
         int counter = 0;
-        System.out.println("Watering with " + (int)wateringAmount);
+        System.out.println("Watering with " + (int) wateringAmount);
         for (Flower item : flowers) {
             if (item.needsWater()) {
                 counter++;

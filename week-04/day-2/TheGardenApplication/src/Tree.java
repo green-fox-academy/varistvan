@@ -1,6 +1,6 @@
 public class Tree extends Plant {
 
-    private double minWater = 10;
+    private int minWater = 10;
 
     public Tree(String color) {
         super(color);
@@ -8,25 +8,15 @@ public class Tree extends Plant {
     }
 
     public void printDemandForWater() {
-        if (this.getWaterLevel() < minWater) {
-            System.out.println("The " + getColor() + " tree needs water.");
-        }else{
-            System.out.println("The " + getColor() + " tree doesn't need water.");
-        }
+        super.printDemandForWater(this.minWater, "tree");
     }
 
     public void absorbWater(double waterUnit) {
-        double absorbedWater;
-        absorbedWater = (waterUnit * 40) / 100 ;
-        addToWaterLevel(absorbedWater);
+        super.absorbWater(waterUnit, 40); // a tree can absorb 40% of the given water
     }
 
     public boolean needsWater() {
-        if (this.getWaterLevel() < minWater){
-            return true;
-        }else{
-            return false;
-        }
+        return super.needsWater(minWater);
     }
 
 }
