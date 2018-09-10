@@ -7,7 +7,6 @@ public class NumberConverterTest {
     @Test
     public void firstConvertion() {
         NumberConverter amount1 = new NumberConverter(0);
-//        String amountLetters1 = amount1.convert(0);
         assertEquals("zero", amount1.convert());
     }
 
@@ -23,11 +22,11 @@ public class NumberConverterTest {
         assertTrue(amount1.isNegative());
     }
 
-    @Test
-    public void wordConvertion() {
-        NumberConverter amount1 = new NumberConverter(" twenty");
-        assertEquals(20, amount1.convertToNr());
-    }
+//    @Test
+//    public void wordConvertion() {
+//        NumberConverter amount1 = new NumberConverter(" twenty");
+//        assertEquals(20, amount1.convertToNr());
+//    }
 
     @Test
     public void newWordConvertion() {

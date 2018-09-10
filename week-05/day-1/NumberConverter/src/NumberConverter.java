@@ -66,19 +66,22 @@ public class NumberConverter {
 
     public int convertToNr() {
         int total = 0;
+        for (int i = 0; i < numNames.length; i++) {
+            if (numNames[i].contains(this.numberWord)) {
+                return i;
+            }
+        }
         String[] splitted = this.numberWord.split(" ");
         for (int j = 0; j < tensNames.length; j++) {
             if (tensNames[j].contains(splitted[1])) {
                 total += j * 10;
             }
         }
-
         for (int i = 0; i < numNames.length; i++) {
             if ((numNames[i].contains(splitted[2])) && (numNames[i].length() < 6)) {
                 total += i;
             }
         }
-
         return total;
     }
 }
