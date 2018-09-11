@@ -1,3 +1,7 @@
+CREATE DATABASE bookstore;
+
+USE bookstore;
+
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 --
@@ -248,3 +252,18 @@ INSERT INTO `purchase` (`invoice_no`, `invoice_dt`, `ord_no`, `ord_date`, `recei
 ('INV0006', '2007-09-24', 'ORD/07-08/0007', '2007-09-20', '2007-09-30', 'BK003', 'Guide to Networking', 'Hindi', 'CA003', 20, '45.00', '900.00');
 
 -- --------------------------------------------------------
+SELECT * FROM author;
+SELECT * FROM book_mast;
+SELECT * FROM category;
+SELECT * FROM despatch;
+SELECT * FROM newpublisher;
+SELECT * FROM `order`;
+SELECT * FROM publisher;
+SELECT * FROM purchase;
+/*selecting   all books   name, author, categoryname, publishersname, price  */
+SHOW tables;
+
+select book_name, aut_name, cate_descrip, pub_name, book_price from book_mast
+left join author on author.aut_id = book_mast.aut_id
+left join category on category.cate_id = book_mast.cate_id
+left join publisher on publisher.pub_id = book_mast.pub_id;
