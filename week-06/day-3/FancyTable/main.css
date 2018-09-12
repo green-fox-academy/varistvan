@@ -9,7 +9,6 @@ table {
     width: 60%;
     border-collapse: collapse;
     margin: 30px auto;
-    
     background: white;
 }
 
@@ -21,7 +20,7 @@ th, td {
     text-align: left; 
     vertical-align: middle;
     height: 48px;
-    color: #999;
+    color: #676767;
     border: 2px solid #999;
     padding: 12px 35px 12px 20px;
 }
@@ -29,6 +28,7 @@ th, td {
 th {
     background: #000000;
     border-bottom: 4px solid #999;
+    color: #ccc;
 }
 
 table tr:first-child th {
