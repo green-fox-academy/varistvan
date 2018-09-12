@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Newsletter Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <form action="https://newsletter-ws.herokuapp.com/signup" method="post">
+        <div>
+            <h2>Submit to the Newsletter</h2>
+        </div>
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" placeholder="name" required>
+        </div>
+        <div>
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" name="email" placeholder="e-mail" required>
+        </div>
+        <div class="button">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>

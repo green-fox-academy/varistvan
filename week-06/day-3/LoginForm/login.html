@@ -11,16 +11,18 @@
 
 <body>
     <form action="login-page.html" method="post">
-        <h2>ACCOUNT LOGIN</h2>
+        <div><h2>ACCOUNT LOGIN</h2></div>
         <div>
-          <label for="username">USERNAME</label>
-          <input type="text" id="name" name="user_name">
+            <label for="username">USERNAME</label>
+            <br>
+            <input type="text" id="name" name="user_name" placeholder="I'm a field" required>
         </div>
         <div>
-          <label for="password">PASSWORD</label>
-          <input type="password" id="password" name="user_password">
+            <label for="password">PASSWORD</label><br>
+            <input type="password" id="password" name="user_password" placeholder="password" required>
+            <br>
+            <a href="forgot-password.html" id="forgot-password">Forgot Password?</a>
         </div>
-        <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
         <div class="button">
             <button type="login">Login</button>
         </div>
