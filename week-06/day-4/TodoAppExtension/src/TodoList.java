@@ -32,7 +32,15 @@ public class TodoList {
     }
 
     public void writeToFile(String pathName) {
-
+        try {
+            List<String> result = new ArrayList<>();
+            for (Todo task : todolist) {
+                result.add(String.format("%s;%s", task.getId(), task.getTask()));
+            }
+            Files.write(Paths.get(pathName), result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void addNewTodo() {

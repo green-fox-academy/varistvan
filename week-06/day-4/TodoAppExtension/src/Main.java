@@ -26,6 +26,7 @@ public class Main {
             } else {
                 System.out.println("Unknown command");
             }
+            tdlist.writeToFile(pathName);
             commandLetter = sc.nextLine();
         }
     }

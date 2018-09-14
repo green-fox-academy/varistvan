@@ -28,6 +28,10 @@ public class Todo {
         return this.id;
     }
 
+    public String getTask() {
+        return task;
+    }
+
     public void completeTask() {
         this.completedAt = LocalDateTime.now(ZoneOffset.UTC);
     }
