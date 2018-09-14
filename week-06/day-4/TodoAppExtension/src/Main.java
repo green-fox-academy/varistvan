@@ -7,8 +7,8 @@ public class Main {
         printUserGuide();
 
         TodoList tdlist = new TodoList();
-        tdlist.addTask("Walk the dog");
-        tdlist.addTask("Buy milk");
+        tdlist.addTask("Walk the milk");
+        tdlist.addTask("Buy dog");
         tdlist.addTask("Do homework");
 
         Scanner sc = new Scanner(System.in);
