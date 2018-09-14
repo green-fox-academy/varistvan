@@ -32,6 +32,10 @@ public class Todo {
         return task;
     }
 
+    public String getCreationTime() {
+        return this.createdAt.toString();
+    }
+
     public void completeTask() {
         this.completedAt = LocalDateTime.now(ZoneOffset.UTC);
     }

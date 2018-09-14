@@ -19,7 +19,7 @@ public class TodoList {
             for (String line : lines) {
                 String[] parts = line.split(";");
 
-                if (parts.length < 2) {
+                if (parts.length < 3) {
                     throw new RuntimeException("File corrupted");
                 }
 
@@ -35,7 +35,7 @@ public class TodoList {
         try {
             List<String> result = new ArrayList<>();
             for (Todo task : todolist) {
-                result.add(String.format("%s;%s", task.getId(), task.getTask()));
+                result.add(String.format("%s;%s;%s", task.getId(), task.getTask(), task.getCreationTime()));
             }
             Files.write(Paths.get(pathName), result);
         } catch (IOException e) {

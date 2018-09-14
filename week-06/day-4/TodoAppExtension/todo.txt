@@ -1,4 +1,4 @@
-1;Buy the Milk
-2;Walk the dog
-4;look at things
-5;talk nonsense
+1;Buy milk;2018-09-14T10:19:15.748
+2;Walk dog;2018-09-14T10:19:15.752
+3;Do homework;2018-09-14T10:19:15.752
+4;Go to the gym;2018-09-14T10:29:34.087
