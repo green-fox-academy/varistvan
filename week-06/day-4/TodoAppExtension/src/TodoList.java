@@ -1,3 +1,6 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -8,6 +11,28 @@ public class TodoList {
 
     public TodoList() {
         this.todolist = new ArrayList<>();
+    }
+
+    public void readFromFile(String pathName) {
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(pathName));
+            for (String line : lines) {
+                String[] parts = line.split(";");
+
+                if (parts.length < 2) {
+                    throw new RuntimeException("File corrupted");
+                }
+
+                Todo task = new Todo(Long.parseLong(parts[0]), parts[1]);
+                todolist.add(task);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void writeToFile(String pathName) {
+
     }
 
     public void addNewTodo() {

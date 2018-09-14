@@ -14,6 +14,11 @@ public class Todo {
         this.task = taskDescription;
         this.createdAt = LocalDateTime.now(ZoneOffset.UTC);
     }
+    public Todo(long taskId, String taskDescription) {
+        this.id = (int) taskId;
+        this.task = taskDescription;
+        this.createdAt = LocalDateTime.now(ZoneOffset.UTC);
+    }
 
     public void setId(int idNumber) {
         this.id = idNumber;

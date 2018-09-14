@@ -7,6 +7,8 @@ public class Main {
         printUserGuide();
 
         TodoList tdlist = new TodoList();
+        String pathName = "todo.txt";
+        tdlist.readFromFile(pathName);
 
         Scanner sc = new Scanner(System.in);
         String commandLetter = sc.nextLine();
@@ -32,7 +34,7 @@ public class Main {
         System.out.println("Todo application");
         System.out.println("================");
         System.out.println();
-        System.out.println("User instruction:");
+        System.out.println("User instructions:");
         System.out.println("l   Lists all the tasks");
         System.out.println("a   Adds a new task");
         System.out.println("r   Removes a task");
