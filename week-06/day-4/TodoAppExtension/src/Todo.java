@@ -9,11 +9,11 @@ public class Todo {
     private LocalDateTime createdAt;
     private LocalDateTime completedAt;
 
-
     public Todo(String taskDescription) {
         this.task = taskDescription;
         this.createdAt = LocalDateTime.now(ZoneOffset.UTC);
     }
+
     public Todo(long taskId, String taskDescription) {
         this.id = (int) taskId;
         this.task = taskDescription;
@@ -49,7 +49,8 @@ public class Todo {
     }
 
 //    public Duration completionTime(LocalDateTime created, LocalDateTime completed) {
-//        return completed - created;
+//        Duration
+//        return ;
 //    }
 
 }
