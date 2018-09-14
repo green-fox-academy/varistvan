@@ -7,9 +7,6 @@ public class Main {
         printUserGuide();
 
         TodoList tdlist = new TodoList();
-        tdlist.addTask("Walk the milk");
-        tdlist.addTask("Buy dog");
-        tdlist.addTask("Do homework");
 
         Scanner sc = new Scanner(System.in);
         String commandLetter = sc.nextLine();
@@ -17,40 +14,18 @@ public class Main {
             if (commandLetter.equalsIgnoreCase("l")) {
                 tdlist.printListWithNumbers();
             } else if (commandLetter.equalsIgnoreCase("a")) {
-                addNewTodo(tdlist);
+                tdlist.addNewTodo();
             } else if (commandLetter.equalsIgnoreCase("c")) {
-                completeTheTodo(tdlist);
+                tdlist.completeTheTodo();
             } else if (commandLetter.equalsIgnoreCase("r")) {
-                removeTodoFromList(tdlist);
+                tdlist.removeTodoFromList();
+            } else if (commandLetter.equalsIgnoreCase("i")) {
+                printUserGuide();
             } else {
                 System.out.println("Unknown command");
             }
             commandLetter = sc.nextLine();
         }
-    }
-
-    private static void addNewTodo(TodoList tdlist) {
-        Scanner scDescr = new Scanner(System.in);
-        System.out.println("Add description for the new task: ");
-        String taskName = scDescr.nextLine();
-        tdlist.addTask(taskName);
-        tdlist.printListWithNumbers();
-    }
-
-    private static void completeTheTodo(TodoList tdlist) {
-        Scanner scComplNum = new Scanner(System.in);
-        System.out.println("Number of task to complete: ");
-        int taskNrToComplete = scComplNum.nextInt();
-        tdlist.completeTask(taskNrToComplete);
-        tdlist.printListWithNumbers();
-    }
-
-    private static void removeTodoFromList(TodoList tdlist) {
-        Scanner scRemNum = new Scanner(System.in);
-        System.out.println("The id nr. of the task you want to remove: ");
-        int taskIdToRemove = scRemNum.nextInt();
-        tdlist.removeTask(taskIdToRemove);
-        tdlist.printListWithNumbers();
     }
 
     private static void printUserGuide() {
@@ -62,6 +37,7 @@ public class Main {
         System.out.println("a   Adds a new task");
         System.out.println("r   Removes a task");
         System.out.println("c   Completes a task");
+        System.out.println("i   Prints out the instructions' list");
         System.out.println("x   Exit");
         System.out.println();
     }

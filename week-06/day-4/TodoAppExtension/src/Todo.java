@@ -1,3 +1,4 @@
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 
@@ -33,5 +34,9 @@ public class Todo {
             System.out.println(this.id + ". [ ] " + this.task + ", created at: " + this.createdAt.toString());
         }
     }
+
+//    public Duration completionTime(LocalDateTime created, LocalDateTime completed) {
+//        return completed - created;
+//    }
 
 }
