@@ -1,16 +1,23 @@
 package com.varistvan.helloworld.models;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Greeting {
 
-    private long id;
+    private int id;
     private String content;
 
-    public Greeting(long id, String content) {
+    public Greeting(int id, String content) {
         this.id = id;
         this.content = content;
     }
 
-    public long getId() {
+//    public Greeting(String content) {
+//        this.id = id;
+//        this.content = content;
+//    }
+
+    public int getId() {
         return id;
     }
 
