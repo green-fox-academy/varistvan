@@ -10,12 +10,14 @@
     <p>List of bank accounts:</p>
     <table>
         <tr>
-            <th>Name of the account owner</th>
-            <th>species</th>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Species</th>
             <th>Balance</th>
         </tr>
         <th:block th:each="element : ${accounts}">
             <tr>
+                <td th:text="|${elementStat.index + 1}|"></td>
                 <td th:text="|${element.name}|"></td>
                 <td th:text="|${element.animalType}|"></td>
                 <td th:text="|${#numbers.formatDecimal(element.balance, 1, 2)}|"></td>
