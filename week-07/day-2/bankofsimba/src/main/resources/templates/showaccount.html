@@ -6,8 +6,8 @@
     <meta charset="utf-8" />
 </head>
 <body>
-    <h1 style="color:forestgreen;">BANK OF SIMBA</h1>
-    <p>Bank account informations:</p>
-    <p th:text="|${accountData.name} ${accountData.balance} ${accountData.animalType} |"></p>
+    <h3>BANK OF SIMBA</h3>
+    <p><i>Bank account informations:</i></p>
+    <p th:text="|${accountData.name} ${#numbers.formatDecimal(accountData.balance, 1, 2)} Zebra ${accountData.animalType}|"></p>
 </body>
 </html>
