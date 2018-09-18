@@ -11,12 +11,12 @@ h3 {
     font-style: oblique;
 }
 
-h4 {
+p {
     width: 60%;
     margin: 5px auto;
     color: #111111;
     font-family: 'Arial';
-    font-size: 28px;
+    font-size: 22px;
     font-stretch: condensed;
 }
 table {
