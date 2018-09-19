@@ -2,6 +2,7 @@ package com.greenfoxacademy.hellobeanworld;
 
 import org.springframework.stereotype.Service;
 
+//@Service
 public class RedColor implements MyColor {
 
     private Printer printer;
