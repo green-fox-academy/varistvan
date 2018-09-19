@@ -1,4 +1,4 @@
-package com.greenfoxacademy.hellobeanworld;
+package com.greenfoxacademy.hellobeanworld.models;
 
 import org.springframework.stereotype.Service;
 

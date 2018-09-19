@@ -1,6 +1,4 @@
-package com.greenfoxacademy.hellobeanworld;
-
-import org.springframework.stereotype.Service;
+package com.greenfoxacademy.hellobeanworld.models;
 
 //@Service
 public class BlueColor implements MyColor {

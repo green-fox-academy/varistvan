@@ -1,5 +1,7 @@
 package com.greenfoxacademy.hellobeanworld;
 
+import com.greenfoxacademy.hellobeanworld.models.MyColor;
+import com.greenfoxacademy.hellobeanworld.models.Printer;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
