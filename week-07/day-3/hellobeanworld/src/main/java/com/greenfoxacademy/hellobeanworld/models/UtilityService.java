@@ -3,6 +3,7 @@ package com.greenfoxacademy.hellobeanworld.models;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 @Service
@@ -22,5 +23,13 @@ public class UtilityService {
 
     public String randomColor() {
         return colors.get(random.nextInt(colors.size()));
+    }
+
+    public boolean isEmailValid(String email) {
+        if (email.contains("@") && email.contains(".")) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -17,3 +17,15 @@ body.orange {
 body.magenta {
     background-color: magenta;
 }
+
+body {
+
+}
+
+p.true {
+    color: green;
+}
+
+p.false {
+    color: red;
+}
