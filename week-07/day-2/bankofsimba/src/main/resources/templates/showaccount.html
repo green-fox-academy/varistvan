@@ -8,6 +8,12 @@
 <body>
     <h3>BANK OF SIMBA</h3>
     <p><i>Bank account informations:</i></p>
-    <p th:text="|${accountData.name} ${#numbers.formatDecimal(accountData.balance, 1, 2)} Zebra ${accountData.animalType}|"></p>
+    <table>
+        <tr>
+            <td th:text="${accountData.name}"></td>
+            <td th:text="${accountData.animalType}"></td>
+            <td th:text="|${#numbers.formatDecimal(accountData.balance, 1, 2)} Zebras|"></td>
+        </tr>
+    </table>
 </body>
 </html>
