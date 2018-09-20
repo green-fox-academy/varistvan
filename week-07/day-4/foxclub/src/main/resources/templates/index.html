@@ -7,9 +7,10 @@
 <body>
     <ul>
         <li><a href="/information">Information</a></li>
+        <li><a href="/login">Login</a></li>
     </ul>
-    <img src="greenfox.png">
-    <p>This is Mr. Fox. Currently living on pizza and lemonade. He knows 2 tricks.</p>
+    <img th:src="${(name.equals('Istvan')) ? 'tiredfox.jpg' : 'greenfox.png'}"/>
+    <p th:text="|This is ${name}. Currently living on pizza and water. He knows 2 tricks.|"></p>
     <h1>Known tricks</h1>
     <ul>
         <li>write HTML</li>
