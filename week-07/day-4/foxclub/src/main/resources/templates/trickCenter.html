@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrition Store</title>
+</head>
+<body>
+    <h1>Informations</h1>
+    <ul>
+        <li><a href="/index">Information</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/nutritionStore">Nutrition Store</a></li>
+    </ul>
+    <form action="/trickCenter" method="post">
+        <label for="trick-select">Food</label>
+        <select id="trick-select">
+            <option value="">--Please choose an option--</option>
+            <option value="html">Write HTML</option>
+            <option value="java">Code Java</option>
+            <option value="typescript">Code TypeScript</option>
+            <option value="python">Code Python</option>
+            <option value="ruby">Code Ruby</option>
+            <option value="csharp">C#</option>
+        </select>
+        <button type="submit">Learn</button>
+    </form>
+</body>
+</html>
