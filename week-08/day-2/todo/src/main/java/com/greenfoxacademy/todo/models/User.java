@@ -1,4 +1,4 @@
-package com.greenfoxacademy.todo;
+package com.greenfoxacademy.todo.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
