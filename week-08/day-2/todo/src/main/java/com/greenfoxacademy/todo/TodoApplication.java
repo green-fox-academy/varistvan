@@ -20,10 +20,14 @@ public class TodoApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         User user = new User();
-        user.setUsername("Istvan");
+        user.setUsername("István");
         user.setAge(33);
+        User user2 = new User();
+        user2.setUsername("Krisztián");
+        user2.setAge(27);
 
         userRepository.save(user);
+        userRepository.save(user2);
 
         System.out.println(userRepository.findAll());
     }
