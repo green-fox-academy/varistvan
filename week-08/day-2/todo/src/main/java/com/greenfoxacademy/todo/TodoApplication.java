@@ -32,8 +32,10 @@ public class TodoApplication implements CommandLineRunner {
         todo1.setTitle("Learn JavaSpring");
         Todo todo2 = new Todo();
         todo2.setTitle("Walk the milk");
+        todo2.setDone(true);
         Todo todo3 = new Todo();
         todo3.setTitle("Buy Dog");
+        todo3.setUrgent(true);
         Todo todo4 = new Todo();
         todo4.setTitle("Look at things");
 

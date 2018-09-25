@@ -2,12 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/main.css}" />
     <title>Todo List</title>
 </head>
 <body>
     <h1>My Todo List:</h1>
     <p>Todos for today:</p>
     <table>
+        <thead>
+            <th>id.</th>
+            <th>urgent</th>
+            <th>title</th>
+            <th>done</th>
+        </thead>
         <th:block th:each="todo : ${todos}">
             <tr>
                 <td th:text="${todo.id}"/>
