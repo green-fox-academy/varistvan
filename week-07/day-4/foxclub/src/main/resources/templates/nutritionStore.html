@@ -11,10 +11,9 @@
         <li><a href="/login">Login</a></li>
         <li><a href="/trickCenter">Trick Center</a></li>
     </ul>
-    <form action="/nutritionStore" method="post">
-        <label for="food-select">Food</label>
-        <select id="food-select">
-            <option value="">--Please choose an option--</option>
+    <form th:action="@{|/nutritionStore?name=${name}|}" method="post">
+        <label for="food">Food</label>
+        <select id="food" name="food">
             <option value="pizza">Pizza</option>
             <option value="chips">Chips</option>
             <option value="gyros">Gyros</option>
@@ -22,9 +21,8 @@
             <option value="pilota-keksz">Pilóta keksz</option>
             <option value="tuc">TUC</option>
         </select>
-        <label for="drink-select">Drink</label>
-        <select id="drink-select">
-            <option value="">--Please choose an option--</option>
+        <label for="drink">Drink</label>
+        <select id="drink" name="drink">
             <option value="water">Water</option>
             <option value="soda">Soda</option>
             <option value="lemonade">Lemonade</option>

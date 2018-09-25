@@ -7,17 +7,23 @@ import org.springframework.stereotype.Service;
 @Service
 public class FoxService {
 
-    private Fox fox;
     private FoxList foxList;
 
-    public FoxService(Fox fox, FoxList foxList){
-        fox = new Fox();
-        foxList = new FoxList();
+    public FoxService(FoxList foxList){
+        this.foxList = foxList;
     }
 
     public void createFox(String name) {
-        fox = new Fox(name);
+        Fox fox = new Fox(name);
         foxList.addFoxToList(fox);
     }
 
+    public void setNutrition(String foxName, String foodName, String drinkName) {
+        for (Fox item : foxList.getFoxList()) {
+            if(item.getName().equals(foxName)) {
+                item.setFood(foodName);
+                item.setDrink(drinkName);
+            }
+        }
+    }
 }

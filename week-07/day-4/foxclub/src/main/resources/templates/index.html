@@ -7,11 +7,11 @@
 <body>
     <ul>
         <li><a href="/login">Login</a></li>
-        <li><a href="/nutritionStore">Nutrition Store</a></li>
+        <li><a th:href="@{|/nutritionStore?name=${fox.name}|}">Nutrition Store</a></li>
         <li><a href="/trickCenter">Trick Center</a></li>
     </ul>
-    <img th:src="${(name.equals('Istvan')) ? 'tiredfox.jpg' : 'greenfox.png'}">
-    <p th:text="|This is ${name}. Currently living on Food and Drink. He knows 2 tricks.|"></p>
+    <img th:src="${(fox.name.equals('Istvan')) ? 'tiredfox.jpg' : 'greenfox.png'}">
+    <p th:text="|This is ${fox.name}. Currently living on ${fox.food} and ${fox.drink}. He knows ${fox.getTricks().size()} tricks.|"></p>
     <h1>Known tricks</h1>
     <ul>
         <li>write HTML</li>
