@@ -7,6 +7,7 @@ import com.greenfoxacademy.todo.repositories.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.util.Streamable;
 
 @SpringBootApplication
 public class TodoApplication implements CommandLineRunner {
@@ -38,13 +39,35 @@ public class TodoApplication implements CommandLineRunner {
         todo3.setUrgent(true);
         Todo todo4 = new Todo();
         todo4.setTitle("Look at things");
+        Todo todo5 = new Todo();
+        todo5.setTitle("Call Mom");
+        todo5.setUrgent(true);
+        todo5.setDone(true);
+        Todo todo6 = new Todo();
+        todo6.setTitle("Clean the flat");
+        todo6.setDone(true);
+        Todo todo7 = new Todo();
+        todo7.setTitle("Save the World");
+        todo7.setUrgent(true);
+
 
         todoRepository.save(todo1);
         todoRepository.save(todo2);
         todoRepository.save(todo3);
         todoRepository.save(todo4);
+        todoRepository.save(todo5);
+        todoRepository.save(todo6);
+        todoRepository.save(todo7);
 
         System.out.println(todoRepository.findAll());
+
+//        Iterable<Todo> todos = todoRepository.findAll();
+//        for (Todo todo : todos) {
+//            System.out.println(todo.getTitle());
+//        }
+//        Streamable.of(todos).stream()
+//                .filter(u -> !u.isDone())
+//                .forEach(System.out::println);
 
     }
 }

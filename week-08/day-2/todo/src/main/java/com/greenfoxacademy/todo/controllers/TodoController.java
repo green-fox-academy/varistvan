@@ -2,6 +2,7 @@ package com.greenfoxacademy.todo.controllers;
 
 import com.greenfoxacademy.todo.models.Todo;
 import com.greenfoxacademy.todo.repositories.TodoRepository;
+import org.springframework.data.util.Streamable;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
@@ -23,6 +24,21 @@ public class TodoController {
         model.addAttribute("todos", todoRepository.findAll());
         return "todoslist";
     }
+
+//    @GetMapping("/todo")
+//    public String listActive(@RequestParam ("isActive") Boolean isDone, Model model) {
+//        model.addAttribute("todos", todoRepository.findAll());
+//        model.addAttribute("done", isDone);
+//        return "activetodoslist";
+//    }
+
+//    Iterable<Todo> todos = todoRepository.findAll();
+//        for (Todo todo : todos) {
+//            System.out.println(todo.getTitle());
+//        }
+//        Streamable.of(todos).stream()
+//                .filter(u -> !u.isDone())
+//                .forEach(System.out::println);
 
 //    @PostMapping("/")
 //    public String todoPost() {
