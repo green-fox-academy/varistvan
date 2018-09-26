@@ -4,11 +4,11 @@ import com.greenfoxacademy.todo.models.Todo;
 import com.greenfoxacademy.todo.repositories.TodoRepository;
 import org.springframework.data.util.Streamable;
 import org.springframework.stereotype.Controller;
-
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.stream.Collectors;
 
 @Controller
 public class TodoController {
@@ -25,20 +25,20 @@ public class TodoController {
         return "todoslist";
     }
 
-//    @GetMapping("/todo")
-//    public String listActive(@RequestParam ("isActive") Boolean isDone, Model model) {
-//        model.addAttribute("todos", todoRepository.findAll());
-//        model.addAttribute("done", isDone);
-//        return "activetodoslist";
-//    }
+    @GetMapping("/activetodoslist")
+    public String listActive(Model model) {
+        Iterable<Todo> todos = todoRepository.findAll();
+        for (Todo todo : todos) {
+            System.out.println(todo.getTitle());
+        }
+        Iterable<Todo> activetodos = Streamable.of(todos).stream()
+                .filter(t -> !t.isDone())
+                .collect(Collectors.toList());
+        model.addAttribute("activetodos", activetodos);
+        return "activetodoslist";
+    }
 
-//    Iterable<Todo> todos = todoRepository.findAll();
-//        for (Todo todo : todos) {
-//            System.out.println(todo.getTitle());
-//        }
-//        Streamable.of(todos).stream()
-//                .filter(u -> !u.isDone())
-//                .forEach(System.out::println);
+
 
 //    @PostMapping("/")
 //    public String todoPost() {
