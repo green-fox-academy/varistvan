@@ -20,6 +20,7 @@
                 <td th:text="${todo.title}"/>
                 <td th:text="${todo.done}"/>
                 <td th:text="${todo.urgent}"/>
+                <td><a th:href="|/${todo.id}/delete|">Delete</a></td>
             </tr>
         </th:block>
     </table>
