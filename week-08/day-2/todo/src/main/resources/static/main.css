@@ -1,4 +1,4 @@
-body {
+/*body {
     background-color: #00A2E8;
 }
 h1 {
@@ -31,7 +31,7 @@ tr:nth-child(even){
 }
 
 th, td {
-    text-align: left; 
+    text-align: left;
     vertical-align: middle;
     height: 48px;
     color: #676767;
@@ -66,4 +66,4 @@ table tr:last-child td {
 }
 table tr td:last-child {
     border-right: 0;
-}
+}*/

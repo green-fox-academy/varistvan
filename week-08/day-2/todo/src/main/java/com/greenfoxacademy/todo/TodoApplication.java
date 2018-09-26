@@ -59,7 +59,7 @@ public class TodoApplication implements CommandLineRunner {
         todoRepository.save(todo6);
         todoRepository.save(todo7);
 
-        System.out.println(todoRepository.findAll());
+//        System.out.println(todoRepository.findAll());
 
 //        Iterable<Todo> todos = todoRepository.findAll();
 //        for (Todo todo : todos) {
