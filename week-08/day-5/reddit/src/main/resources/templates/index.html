@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h2 {
+            text-align: center;
+        }
+        table {
+            font-family: Arial;
+            font-size: 18px;
+            width: 60%;
+            margin: 10px auto;
+        }
+        tr {
+            height: 32px;
+        }
+    </style>
+    <title>Trending posts</title>
+</head>
+<body>
+    <a href="/submit">Submit new post</a>
+    <h2>Trending posts</h2>
+    <table id="trending">
+        <th:block th:each="post : ${posts}">
+            <tr>
+                <td th:text="${post.rating}"/>
+                <td><a th:href="@{|/upvote/${post.id}|}">+</a></td>
+                <td><a th:href="@{|/downvote/${post.id}|}">-</a></td>
+                <td><a th:text="${post.title}" th:href="${post.url}" target="_blank"></a></td>
+            </tr>
+        </th:block>
+    </table>
+</body>
+</html>

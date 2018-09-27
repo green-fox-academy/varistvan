@@ -26,6 +26,12 @@ public class TodoController {
         return "todoslist";
     }
 
+    @PostMapping("/")
+    public String search(String search, Model model) {
+        model.addAttribute(todoRepository.findByTitle(search));
+        return "redirect:/";
+    }
+
     @GetMapping("/activetodoslist")
     public String listActive(Model model) {
         Iterable<Todo> todos = todoRepository.findAll();
@@ -38,6 +44,16 @@ public class TodoController {
         model.addAttribute("activetodos", activetodos);
         return "activetodoslist";
     }
+
+//    @GetMapping("/search-result")
+//    public String searchResult(Model model) {
+//        Iterable<Todo> todos = todoRepository.findAll();
+//        Iterable<Todo> todosFound = Streamable.of(todos).stream()
+//                .filter(t -> t.getTitle.contains(s))
+//                .collect(Collectors.toList());
+//        model.addAttribute("foundtodos", todosFound);
+//        return "activetodoslist";
+//    }
 
     @GetMapping("/add")
     public String todoForm() {
