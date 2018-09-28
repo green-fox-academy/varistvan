@@ -20,8 +20,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void submitPost(String title, String url) {
-        Post newpost = new Post(title, url);
-        postRepository.save(newpost);
+        postRepository.save(new Post(title, url));
     }
 
     @Override

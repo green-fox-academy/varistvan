@@ -36,13 +36,13 @@ public class MainController {
         return "redirect:/";
     }
 
-    @GetMapping("/upvote/{id}")
+    @PostMapping("/upvote/{id}")
     public String upvote(@PathVariable long id) {
         postService.upvote(id);
         return "redirect:/";
     }
 
-    @GetMapping("/downvote/{id}")
+    @PostMapping("/downvote/{id}")
     public String downvote(@PathVariable long id) {
         postService.downvote(id);
         return "redirect:/";
