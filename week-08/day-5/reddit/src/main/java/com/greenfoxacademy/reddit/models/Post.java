@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.Clock;
 import java.time.LocalDateTime;
 
 @Entity
@@ -24,7 +25,7 @@ public class Post {
         this.title = title;
         this.url = url;
         this.rating = 0;
-        this.createdAt = LocalDateTime.now();
+        this.createdAt = LocalDateTime.now(Clock.systemUTC());
     }
 
     public long getId() {
