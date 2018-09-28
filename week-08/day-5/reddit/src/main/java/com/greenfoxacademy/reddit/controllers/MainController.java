@@ -1,8 +1,6 @@
 package com.greenfoxacademy.reddit.controllers;
 
-import com.greenfoxacademy.reddit.models.Post;
-import com.greenfoxacademy.reddit.repositories.PostRepository;
-import com.greenfoxacademy.reddit.services.PostServiceImpl;
+import com.greenfoxacademy.reddit.services.PostService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,15 +10,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MainController {
 
-    private PostServiceImpl postService;
+    private PostService postService;
 
-    public MainController(PostServiceImpl postService) {
+    public MainController(PostService postService) {
         this.postService = postService;
     }
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("posts", postService.findAll());
+        model.addAttribute("posts", postService.findAllByRating());
         return "index";
     }
 
@@ -31,7 +29,6 @@ public class MainController {
 
     @PostMapping("/submit")
     public String submitSubmit(String title, String url) {
-
         postService.submitPost(title, url);
         return "redirect:/";
     }

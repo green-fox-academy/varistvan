@@ -4,7 +4,7 @@ import com.greenfoxacademy.reddit.models.Post;
 
 public interface PostService {
 
-    Iterable<Post> findAll();
+    Iterable<Post> findAllByRating();
 
     void submitPost(String title, String url);
 
