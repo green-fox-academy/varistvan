@@ -15,7 +15,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Iterable<Post> findAll() {
-        return postRepository.findAll();
+        return postRepository.findAllByOrderByRatingDesc();
     }
 
     @Override
