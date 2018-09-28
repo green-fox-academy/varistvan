@@ -23,6 +23,7 @@
                     </form>
                 </td>
                 <td><a th:text="${post.title}" th:href="${post.url}" target="_blank"></a></td>
+                <td th:text="${post.createdAt==null} ? 'unknown date' : ${post.createdAt}"/>
             </tr>
         </th:block>
     </table>

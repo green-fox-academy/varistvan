@@ -5,5 +5,5 @@ use reddit;
 select * from post;
 
 update post 
-set title = 'This monkey has better coding skills than you'
+set url = 'https://tenor.com/view/monkey-computer-slop-work-stressed-gif-7259279'
 where id = 1;
