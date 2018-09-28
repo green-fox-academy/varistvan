@@ -1,27 +1,14 @@
 package com.greenfoxacademy.reddit.services;
 
 import com.greenfoxacademy.reddit.models.Post;
-import com.greenfoxacademy.reddit.repositories.PostRepository;
-import org.springframework.stereotype.Service;
 
-@Service
-public class PostService {
-    private PostRepository postRepository;
+public interface PostService {
 
-    public PostService(PostRepository postRepository) {
-        this.postRepository = postRepository;
-    }
+    Iterable<Post> findAll();
 
-    public void upvote(long id) {
-        Post post = postRepository.findById(id).orElseThrow(IllegalArgumentException::new);
-        post.setRating(post.getRating() + 1);
-        postRepository.save(post);
-    }
+    void submitPost(String title, String url);
 
-    public void downvote(long id) {
-        Post post = postRepository.findById(id).orElseThrow(IllegalArgumentException::new);
-        post.setRating(post.getRating() - 1);
-        postRepository.save(post);
-    }
+    void upvote(long id);
 
+    void downvote(long id);
 }

@@ -2,7 +2,7 @@ package com.greenfoxacademy.reddit.controllers;
 
 import com.greenfoxacademy.reddit.models.Post;
 import com.greenfoxacademy.reddit.repositories.PostRepository;
-import com.greenfoxacademy.reddit.services.PostService;
+import com.greenfoxacademy.reddit.services.PostServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,17 +12,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MainController {
 
-    private PostRepository postRepository;
-    private PostService postService;
+    private PostServiceImpl postService;
 
-    public MainController(PostRepository postRepository, PostService postService) {
-        this.postRepository = postRepository;
+    public MainController(PostServiceImpl postService) {
         this.postService = postService;
     }
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("posts", postRepository.findAll());
+        model.addAttribute("posts", postService.findAll());
         return "index";
     }
 
@@ -33,8 +31,8 @@ public class MainController {
 
     @PostMapping("/submit")
     public String submitSubmit(String title, String url) {
-        Post newpost = new Post(title, url);
-        postRepository.save(newpost);
+
+        postService.submitPost(title, url);
         return "redirect:/";
     }
 
