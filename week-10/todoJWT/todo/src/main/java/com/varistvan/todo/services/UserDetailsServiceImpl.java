@@ -1,7 +1,8 @@
 package com.varistvan.todo.services;
 
+import com.varistvan.todo.models.User;
 import com.varistvan.todo.repositories.UserRepository;
-import org.springframework.security.core.userdetails.User;
+
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
